@@ -1,0 +1,15 @@
+﻿@model WebApplication2.Models.LoginClass
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+
+@if (Model.PersonKey != 0)
+{
+    <p>Welcome, @Html.DisplayFor(mode => Model.UserName), Please feel free to apply for gratnt</p>
+}
+else
+{
+    <p>Invalid login, please try to login again or register as a Donor.</p>
+}
