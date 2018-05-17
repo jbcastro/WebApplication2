@@ -32,7 +32,7 @@ namespace WebApplication2.Controllers
                             where r.PersonEmail.Equals(loginClass.UserName)
                             select r.PersonKey).FirstOrDefault();
                 loginClass.PersonKey = (int)ukey;
-
+                Session["NewPersonKey"] = loginClass.PersonKey;
                 msg.MessageText = "Welcome " + loginClass.UserName;
             }
             else

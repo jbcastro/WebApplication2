@@ -29,7 +29,7 @@ namespace WebApplication2.Controllers
             db.Donations.Add(b);
             db.SaveChanges();
             Message m = new Message();
-            m.MessageText = "Donation has been added";
+            m.MessageText = "Thank you for your donation";
             return View("Result", m);
         }
 
